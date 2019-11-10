@@ -1,6 +1,6 @@
 import tensorflow as tf
 import matplotlib.pyplot as plt
-import pandas as pandas
+import pandas as pd
 from keras.models import Sequential
 from keras.layers import Dense, Activation
 from keras import optimizers
