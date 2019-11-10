@@ -1,5 +1,23 @@
 {
     "manifest_version": 2,
     "name": "Opinionated",
-    "version": "1.0"
+    "version": "1.0",
+
+    "description": "Highlights portions of the page that are subjective opinions rather than objective statements",
+
+    // "content_scripts": [
+    //     {
+    //         "matches": ["<all_urls>"],
+    //         "js": ["opinionated.js"]
+    //     }
+    // ]
+
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+      ],
+    
+      "background": {
+        "scripts": ["background.js"]
+      }
 }
