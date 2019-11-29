@@ -1,4 +1,7 @@
 function analyzeText (node) {
+
+    console.log("analyzing " + node.textContent);
+
     if (node.nodeType === Node.TEXT_NODE) {
         let content = node.textContent;
         let result;
@@ -16,14 +19,16 @@ function analyzeText (node) {
             //build the resulting DOM content
             if( result === 0) {
                 //objective
-                resultString += sentence;
+                resultString += sentence + ".";
             }
             else {
                 //subjective
-                resultString += "<span class='highlight'>" + sentence + "</span>";
+                resultString += "<span class='opinionate-highlight'>" + sentence + ".</span>";
+                console.log("Added highlighting");
             }
         });
 
+        node.innerHTML = resultString;
 
     }
     else { //the node is not a text node
